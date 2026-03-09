@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Portifólio</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="suitspair">&#9824</div>
+        <div class="suits">&#9829</div>
+        <a href="#cardsBox"><strong>CARDS</strong></a>
+        <div class="suits">&#9827</div>
+        <div class="suitspair">&#9830</div>
+    </header>
+
+    <section class="aboutme" id="aboutme">
+
+        <div class="aboutmepic">
+            <div class="photobackground">
+            </div>      
+            <img src="/assets/photo.png" alt="photo" class="pic">
+        </div>
+
+        <div class="aboutmeContent">
+            <h1>
+                Olá sou <span>Gustavo Almeida!</span>
+            </h1>
+            <h2>
+                Sou um <strong>Estudante Full Stack</strong>
+            </h2>
+            <p>
+                Estou cursando o 3° semestre de <strong>Análise e Desenvolvimento de Sistemas</strong> na 
+                Universidade Católica de Brasília. Tenho conhecimento em desenvolvimento
+                Full Stack, com maior interesse em backend e cybersecurity.
+            </p>
+            <div class="icons">
+                <a href="https://github.com/Lagan-lttk"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/gustavo-almeida-6016672a7/"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/gustavo_lttk/"><i class="fa fa-instagram"></i></a>
+                <a><i class="fa fa-coffee"></i></a>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <div class="cardsBox" id="cardsBox">
+        <a href="#aboutme" class="card">
+            <div class="card-content">
+                <h3 class="card-symbol">
+                        &#9824;
+                </h3>
+                <h4 class="card-subtitle">
+                    <p>ABOUT ME</p>
+                </h4>
+            </div>
+        </a>
+        <a href="/pages/projects.html" class="card">
+            <div class="card-content">
+                <h3 class="card-symbol-pair">
+                        &#9829;
+                </h3>
+                <h4 class="card-subtitle">
+                    <p>PROJECTS</p>
+                </h4>
+            </div>
+        </a>
+        <a href="/pages/skills.html" class="card">
+            <div class="card-content">
+                <h3 class="card-symbol">
+                        &#9827;
+                </h3>
+                <h4 class="card-subtitle">
+                    <p>SKILLS</p>
+                </h4>
+            </div>
+        </a>
+        <a href="/pages/contacts.html" class="card">
+            <div class="card-content">
+                <h3 class="card-symbol-pair">
+                        &#9830;
+                </h3>
+                <h4 class="card-subtitle">
+                    <p>CONTACTS</p>
+                </h4>
+            </div>
+        </a>
+    </div>
+
+    <script src="/js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+	VanillaTilt.init(document.querySelectorAll(".card"), {
+		max: 25,
+		speed: 4000
+	});
+</script>
+</body>
+
+</html>

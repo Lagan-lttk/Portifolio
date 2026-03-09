@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+:root {
+  --border: rgba(0, 51, 160, 0.863);
+  
+  --g1: rgba(0, 0, 0, 0.897);
+  --g2: rgb(0, 68, 255);
+  --g3: rgb(130, 63, 255);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  height: 200vh;
+  background: linear-gradient(to bottom, #000, #1f0135);
+  background-color: #ea00ff11;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  flex-direction: column;
+  justify-content:center;
+  user-select: none;
+  font-family: 'Times New Roman', Times, serif;
+  overflow-x: hidden;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  text-align: center;
+  font-size: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+header a{
+  text-decoration: none;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+  color: #8820c4;
+  letter-spacing: 10px;
+  transition: filter 0.3s ease;
+}
+
+header a:hover{
+  filter: brightness(1.5);
+}
+
+.suits{
+  color: #8820c470;
+}
+
+.suitspair{
+  color: rgba(0, 4, 255, 0.377);
+}
+
+.aboutme{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 130px;
+  margin-bottom: 200px;
+  margin-top: 60px;
+  margin-right: 5vw;
+  transition: 1s;
+  scale: 1.1;
+}
+
+.aboutme img{
+  height: 120.07%;
+  width: auto;
+  margin-top: 3.6px;
+  margin-left: -26px;
+}
+
+.aboutme .photobackground{
+  position: absolute;
+  width: 106%;
+  height: 100%;
+  background-image: url("/assets/photoBackground.jpg");
+  background-size: cover;
+  border-radius: 80px 80px 60px 60px ;
+  z-index: -1;
+  margin-top: 80px;
+  margin-left: 55px;
+}
+
+.aboutmepic{
+  position: relative;
+  width: 300px;
+  height: 380px;
+}
+
+.aboutmeContent{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column; 
+  flex-grow: 1;
+  color: white;
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.aboutme h1{
+  font-size: 50px;
+}
+
+.aboutme h2{
+  font-size: 40px ;
+}
+
+.aboutme p{
+  font-size: 28px;
+  text-align: justify;
+  width: 60vw;
+}
+
+
+
+.aboutmeContent h1 span{
+  color: rgb(0, 195, 255);
+}
+
+.aboutme h2{
+  margin-top: -15px;
+  font-size: 35px;
+}
+
+.aboutme h2 strong{
+  color: rgb(0, 169, 255);
+}
+
+
+.icons{
+  margin-top: 10px;
+  display: flex;
+  gap: 30px;
+}
+
+.icons i{
+  color: rgb(0, 169, 255);
+  transition: filter 0.3s ease;
+}
+
+.icons i:hover{
+  filter: brightness(1.5);
+}
+
+.cardsBox{
+  display: flex;
+  justify-content: space-between;
+  column-gap: 4%;
+  margin: 2%;
+  animation-name: movecard;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+
+.cardsBox a{
+  aspect-ratio: 1 / 1.6;
+  border: 0.5vmin solid var(--border);
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  width: 35vmin;
+  height: 65vmin;
+  background-color: #ea00ff11;
+  transform-style: preserve-3d;
+  transition: 1s;
+  text-decoration: none;
+  margin-bottom: 50px;
+}
+
+.card::before{
+  background: linear-gradient(
+    130deg,
+    transparent 0% 33%,
+    var(--g1) 66%,
+    var(--g2) 83.5%,
+    var(--g3) 100%
+  );
+  background-position: 0% 0%;
+  background-size: 300% 300%;
+  content: "";
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  top: 0%;
+  transition: background-position 350ms ease, transform 350ms ease;
+  width: 100%;
+  z-index: 1;
+  border-radius: 20px;
+  transform-style: preserve-3d;
+}
+
+.card:hover:before{
+  background-position: 100% 100%;
+  transform: scale(1.08, 1.03);
+  transform-style: preserve-3d;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2; 
+}
+
+.card:hover .card-symbol{
+  transform: translateZ(20px);
+  color: aqua;
+  scale: calc(1.1);
+  padding-top: 20%;
+}
+
+.card:hover .card-symbol-pair{
+  transform: translateZ(20px);
+  color: rgb(209, 17, 200);
+  scale: calc(1.1);
+  padding-top: 20%;
+}
+
+.card:hover .card-subtitle{
+  position:inherit;
+  transform: translateZ(20px);
+  color: rgb(215, 228, 36);
+  font-size: 44px;
+  transition-duration: 1s;
+  text-shadow: 0;
+}
+
+.card-symbol{
+  color: rgb(123, 1, 180);
+  font-family: geneva;
+  font-weight: 400;
+  margin: 0;
+  font-size: 30vmin;
+  height: -100px;
+  text-align: center;
+  padding-top: 38%;
+  position: relative;
+  transition: 1s;
+}
+
+.card-symbol-pair{
+  color: rgb(1, 100, 180);
+  font-family: geneva;
+  font-weight: 400;
+  margin: 0;
+  font-size: 30vmin;
+  height: -100px;
+  text-align: center;
+  padding-top: 38%;
+  position: relative;
+  transition: 1s;
+}
+
+.card-subtitle{
+  color: rgba(0, 0, 0, 0);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 400;
+  margin: 0;
+  font-size: 5vmin;
+  padding-top: 20px;
+  text-align: center;
+  text-decoration:solid;
+  text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
+  transition: 1s;
+}
+
+@keyframes movecard {
+  0%{
+    transform: translate(0, 0);
+  }
+  25%{
+    transform: translate(0, -7px);
+  }
+  75%{
+    transform: translate(0, 7px);
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}
