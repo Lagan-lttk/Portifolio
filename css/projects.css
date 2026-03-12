@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  height: 100vh;
+  color: white;
+  background: linear-gradient(to bottom, #000, #1f0135);
+  background-color: #ea00ff11;
+  display: grid;
+  flex-direction: column;
+  justify-content:center;
+  user-select: none;
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: hidden;
+}
+
+.container{
+ text-align: center;
+}

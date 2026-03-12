@@ -9,7 +9,9 @@
     <title>Portifólio</title>
 </head>
 
-<body>
+<body data-barba="wrapper">
+
+    <main data-barba="container" data-barba-namespace="home">
 
     <header>
         <div class="suitspair">&#9824</div>
@@ -24,17 +26,17 @@
         <div class="aboutmepic">
             <div class="photobackground">
             </div>      
-            <img src="/assets/photo.png" alt="photo" class="pic">
+            <img src="/assets/images/photo.png" alt="photo" class="pic">
         </div>
 
         <div class="aboutmeContent">
-            <h1>
+            <h1 id="title">
                 Olá sou <span>Gustavo Almeida!</span>
             </h1>
-            <h2>
+            <h2 id="subtitle">
                 Sou um <strong>Estudante Full Stack</strong>
             </h2>
-            <p>
+            <p id="aboutmeParagraph">
                 Estou cursando o 3° semestre de <strong>Análise e Desenvolvimento de Sistemas</strong> na 
                 Universidade Católica de Brasília. Tenho conhecimento em desenvolvimento
                 Full Stack, com maior interesse em backend e cybersecurity.
@@ -50,9 +52,8 @@
 
     </section>
 
-
     <div class="cardsBox" id="cardsBox">
-        <a href="#aboutme" class="card">
+        <a href="#aboutme" class="card" id="aboutmeCard">
             <div class="card-content">
                 <h3 class="card-symbol">
                         &#9824;
@@ -94,6 +95,8 @@
         </a>
     </div>
 
+    </main>
+    <script src="/js/home.js"></script>
     <script src="/js/vanilla-tilt.js"></script>
     <script type="text/javascript">
 	VanillaTilt.init(document.querySelectorAll(".card"), {
